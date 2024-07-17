@@ -1,8 +1,13 @@
-
+import React from "react";
+import { GlobalStyle } from "./assets/styles/global";
+import AppRoutes from "./routes/Routes";
 
 function App() {
   return (
-    <h1>Hello world</h1>
+    <>
+      <GlobalStyle />
+      <AppRoutes />
+    </>
   );
 }
 
