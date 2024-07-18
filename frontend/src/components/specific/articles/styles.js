@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CardsMediaStyles, ContentMediaStyles, SvgMediaStyles, TitleMediaStyles } from "./responsive";
+import { ContentMediaStyles, SvgMediaStyles, TextMediaStyles, TitleMediaStyles } from "./responsive";
 
 export const Content = styled.div`
     display: flex;
@@ -8,8 +8,8 @@ export const Content = styled.div`
     flex-direction: column;
     background-color: #fff;
     border-radius: 1vh;
-    height: ${props => props.$height};
-    width: 70vw;
+    height: auto;
+    width: 50vw;
     ${ContentMediaStyles};
 `;
 
@@ -18,7 +18,7 @@ export const Title = styled.div`
     align-items: center;
     padding: 1rem;
     gap: 1rem;
-    width: 68vw;
+    width: 48vw;
     height: 10vh;
     border-bottom: 0.1vh solid #8906E61A;
     ${TitleMediaStyles};
@@ -29,12 +29,13 @@ export const Title = styled.div`
     }
 `;
 
-export const Cards = styled.div`
+export const Text = styled.div`
     display: flex;
-    align-items: center;
-    gap: 1.5vw;
+    flex-direction: column;
+    gap: 4vh;
+    padding: 1rem;
+    width: 48vw;
     height: auto;
-    flex-wrap: wrap;
-    width: 65vw;
-    ${CardsMediaStyles};
+    line-height: 3vh;
+    ${TextMediaStyles};
 `;

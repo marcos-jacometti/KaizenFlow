@@ -19,6 +19,10 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'MontserratRegular';
         background-color: #f4f5f4;
+        
+        .link {
+            text-decoration: none;
+        }
     }
 `;
 
@@ -34,13 +38,17 @@ export const MainContent = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 82vw;
-    height: 100vh;
+    height: ${props => props.$height};
     margin-left: 18vw;
+    gap: ${props => props.$gap};
+    margin-top: ${props => props.$margin};
+    margin-bottom: ${props => props.$bottom};
 
     @media ${device.mobile}{
         margin-left: 0;
         width: 100vw;
-        height: 90.5vh;
+        height: ${props => props.$heightMediaStyles};
     }
 `;

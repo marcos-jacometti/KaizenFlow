@@ -9,7 +9,7 @@ export default function Configs(){
     return(
         <Container>
             <Header />
-            <MainContent>
+            <MainContent $height="100vh" $heightMediaStyles="90.5vh">
                 <Content>
                     <Title>
                         <GoGear />
