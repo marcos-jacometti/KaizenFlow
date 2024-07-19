@@ -1,9 +1,11 @@
 import styled from "styled-components";
-import { ContainerMediaStyles } from "./responsive";
+import { ContainerMediaStyles, H4MediaStyles } from "./responsive";
 
 export const Container = styled.div`
     display: flex;
-    align-items: end;
+    align-items: ${props => props.$align};
+    justify-content: ${props => props.$justify};
+    flex-direction: ${props => props.$direction};
     padding: 3vh;
     height: ${props => props.$height};
     width: ${props => props.$width};
@@ -11,10 +13,16 @@ export const Container = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     background: url(${props => props.$background}) center / cover;
-    color: #fff;
+    color: ${props => props.$color};
     ${ContainerMediaStyles};
 
     &:hover {
-        transform: translateY(-0.5vh);
+        transform: translateY(-0.3vh);
+    }
+
+    h4 {
+        text-align: center;
+        max-width: 15vw;
+        ${H4MediaStyles};
     }
 `;

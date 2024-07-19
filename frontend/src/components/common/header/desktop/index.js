@@ -37,7 +37,7 @@ export default function DesktopHeader() {
                 >
                     {visibility.settings && <SubMenu link="/teamA" linkTwo="/teamB" title="Team A" titleTwo="Team B" />}
                 </NavBar>
-                <NavBar link="/graphics" svg={<BsClipboard2Data />} title="Graphics" />
+                <NavBar link="/graphics" svg={<BsClipboard2Data />} title="Charts" />
                 <NavBar link="/configs" svg={<GoGear />} title="Configurations" />
             </nav>
             <HelpCenter />

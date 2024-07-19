@@ -7,3 +7,9 @@ export const ContainerMediaStyles = css`
         height: 50vh;
     }
 `;
+
+export const H4MediaStyles = css`
+    @media ${device.mobile} {
+        min-width: 60vw;
+    }
+`;

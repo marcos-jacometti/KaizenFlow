@@ -41,7 +41,7 @@ export default function NavMobile({visible, setVisible}){
                 >
                     {visibility.settings && <SubMenu link="/teamA" linkTwo="/teamB" title="Team A" titleTwo="Team B" />}
                 </NavBar>
-                <NavBar link="/graphics" svg={<BsClipboard2Data />} title="Graphics" />
+                <NavBar link="/graphics" svg={<BsClipboard2Data />} title="Charts" />
                 <NavBar link="/configs" svg={<GoGear />} title="Configurations" />
                 <NavBar link="/" svg={<BiSupport />} title="Support" />
             </nav>
