@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { activeMediaStyles, subMenuContainerMediaStyles } from "./responsive";
+import { subMenuContainerMediaStyles } from "./responsive";
 
 export const SubMenuContainer = styled.div`
   display: flex;
@@ -17,6 +17,5 @@ export const SubMenuContainer = styled.div`
 
  .link.active {
     color: #8906E6;
-    ${activeMediaStyles};
   }
 `;

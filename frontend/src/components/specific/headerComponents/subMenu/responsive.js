@@ -6,9 +6,3 @@ export const subMenuContainerMediaStyles = css`
         font-size: 4vw;
     }
 `;
-
-export const activeMediaStyles = css`
-    @media ${device.mobile}{
-        color: #fff;
-    }
-`;

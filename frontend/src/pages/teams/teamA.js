@@ -23,7 +23,7 @@ export default function TeamA(){
     return(
         <Container>
             <Header />
-            <MainContent $height="100vh">
+            <MainContent $height="100vh" $heightMediaStyles="90.5vh">
                 <Content>
                     <Title>
                         <h5>Name</h5>
