@@ -6,15 +6,15 @@ export const ButtonContainer = styled.div`
 
     button {
         background-color: transparent;
-        border: none;
+        border: ${props => props.$border};
         height: 4vh;
         width: 12vw;
-        background-color: #8906E6;
+        background-color: ${props => props.$background};
         border-radius: 1vh;
         font-size: 0.9vw;
         cursor: pointer;
         font-weight: bold;
-        color: #fff;
+        color: ${props => props.$color};
         ${buttonMediaStyles};
 
         &:hover { 

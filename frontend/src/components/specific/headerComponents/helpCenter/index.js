@@ -11,7 +11,7 @@ export default function HelpCenter(){
             </CallLogo>
             <h3>Help Center</h3>
             <span>Talk to us if you have any problems</span>
-            <Button link="" title="Suport"/>
+            <Button link="" title="Support" background="#8906E6" border="none" color="#fff" />
         </HelpContainer>
     );
 }

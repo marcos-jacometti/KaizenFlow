@@ -35,7 +35,7 @@ export default function DesktopHeader() {
                     title="Team Members"
                     arrow={visibility.settings ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 >
-                    {visibility.settings && <SubMenu link="/teams" linkTwo="/teams" title="Team A" titleTwo="Team B" />}
+                    {visibility.settings && <SubMenu link="/teamA" linkTwo="/teamB" title="Team A" titleTwo="Team B" />}
                 </NavBar>
                 <NavBar link="/graphics" svg={<BsClipboard2Data />} title="Graphics" />
                 <NavBar link="/configs" svg={<GoGear />} title="Configurations" />

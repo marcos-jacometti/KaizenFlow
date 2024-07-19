@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "../pages/home";
 import Configs from "../pages/configs";
 import Articles from "../pages/articles";
-import Teams from "../pages/teams";
 import Graphics from "../pages/graphics";
 import Article01 from "../components/specific/articles/article01";
 import Article02 from "../components/specific/articles/article02";
@@ -19,6 +18,8 @@ import Article11 from "../components/specific/articles/article11";
 import Article12 from "../components/specific/articles/article12";
 import Article13 from "../components/specific/articles/article13";
 import Article14 from "../components/specific/articles/article14";
+import TeamA from "../pages/teams/teamA";
+import TeamB from "../pages/teams/teamB";
 
 const AppRoutes = () => {
     return(
@@ -26,11 +27,10 @@ const AppRoutes = () => {
             <Routes>
                 <Route path="/" element={ <HomePage /> } />
                 <Route path="/articles" element={ <Articles /> } />
-                <Route path="/teams" element={ <Teams /> } />
                 <Route path="/graphics" element={ <Graphics /> } />
                 <Route path="/configs" element={ <Configs /> } />
 
-                {/* Articles links */}
+                {/* Articles Routes */}
                 <Route path="/article01" element={ <Article01 /> } />
                 <Route path="/article02" element={ <Article02 /> } />
                 <Route path="/article03" element={ <Article03 /> } />
@@ -45,6 +45,10 @@ const AppRoutes = () => {
                 <Route path="/article12" element={ <Article12 /> } />
                 <Route path="/article13" element={ <Article13 /> } />
                 <Route path="/article14" element={ <Article14 /> } />
+
+                {/* Teams Routes */}
+                <Route path="/teamA" element={ <TeamA /> } />
+                <Route path="/teamB" element={ <TeamB /> } />
             </Routes>
         </Router>
     );
