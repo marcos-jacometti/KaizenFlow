@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Close } from "./styles";
 import { IoClose } from "react-icons/io5";
 import NavBar from "../navBar/index";
-import { LuHome } from "react-icons/lu";
+import { LuHome, LuBookMarked } from "react-icons/lu";
 import { MdOutlineArticle, MdOutlinePeopleAlt } from "react-icons/md";
 import { BsClipboard2Data } from "react-icons/bs";
 import { GoGear } from "react-icons/go";
@@ -31,7 +31,8 @@ export default function NavMobile({visible, setVisible}){
                 </button>
             </Close>
             <nav>
-                <NavBar link="/" svg={<LuHome />} title="Home" />
+            <NavBar link="/" svg={<LuHome />} title="Home" />
+                <NavBar link="/classes" svg={<LuBookMarked />} title="Classes" />
                 <NavBar link="/articles" svg={<MdOutlineArticle />} title="Articles" />
                 <NavBar 
                     onClick={() => handleToggle('settings')}

@@ -20,12 +20,14 @@ import Article13 from "../components/specific/articles/article13";
 import Article14 from "../components/specific/articles/article14";
 import TeamA from "../pages/teams/teamA";
 import TeamB from "../pages/teams/teamB";
+import Classes from "../pages/classes";
 
 const AppRoutes = () => {
     return(
         <Router>
             <Routes>
                 <Route path="/" element={ <HomePage /> } />
+                <Route path="/classes" element={ <Classes /> } />
                 <Route path="/articles" element={ <Articles /> } />
                 <Route path="/graphics" element={ <Graphics /> } />
                 <Route path="/configs" element={ <Configs /> } />

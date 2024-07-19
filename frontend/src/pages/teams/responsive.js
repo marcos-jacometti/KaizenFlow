@@ -28,7 +28,7 @@ export const ButtonsMediaStyles = css`
 export const StyledToastMediaStyles = css`
     @media ${device.mobile} {
         width: 80vw;
-        top: 85vh;
+        top: 10vh;
         padding: 1rem;
     }
 `;

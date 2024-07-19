@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HeaderContainer } from "./styles";
 import Logo from "../../../specific/headerComponents/logo";
 import NavBar from "../../../specific/headerComponents/navBar";
-import { LuHome } from "react-icons/lu";
+import { LuBookMarked, LuHome } from "react-icons/lu";
 import { MdOutlineArticle, MdOutlinePeopleAlt } from "react-icons/md";
 import { BsClipboard2Data } from "react-icons/bs";
 import { GoGear } from "react-icons/go";
@@ -28,6 +28,7 @@ export default function DesktopHeader() {
             <Logo height="12vh" width="16vw" />
             <nav>
                 <NavBar link="/" svg={<LuHome />} title="Home" />
+                <NavBar link="/classes" svg={<LuBookMarked />} title="Classes" />
                 <NavBar link="/articles" svg={<MdOutlineArticle />} title="Articles" />
                 <NavBar 
                     onClick={() => handleToggle('settings')}
