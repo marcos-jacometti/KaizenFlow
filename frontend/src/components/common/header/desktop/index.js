@@ -33,10 +33,10 @@ export default function DesktopHeader() {
                 <NavBar 
                     onClick={() => handleToggle('settings')}
                     svg={<MdOutlinePeopleAlt />}
-                    title="Team Members"
+                    title="Members"
                     arrow={visibility.settings ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 >
-                    {visibility.settings && <SubMenu link="/teamA" linkTwo="/teamB" title="Team A" titleTwo="Team B" />}
+                    {visibility.settings && <SubMenu link="/teamA" linkTwo="/allUsers" title="Your User" titleTwo="All Users" />}
                 </NavBar>
                 <NavBar link="/graphics" svg={<BsClipboard2Data />} title="Charts" />
                 <NavBar link="/configs" svg={<GoGear />} title="Configurations" />

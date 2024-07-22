@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { buttonMediaStyles } from "./responsive";
+import { ButtonMediaStyles } from "./responsive";
 
 export const ButtonContainer = styled.div`
     border-radius: 1vh;
@@ -15,7 +15,7 @@ export const ButtonContainer = styled.div`
         cursor: pointer;
         font-weight: bold;
         color: ${props => props.$color};
-        ${buttonMediaStyles};
+        ${ButtonMediaStyles};
 
         &:hover { 
             box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4), 0 8px 8px 0 rgba(0, 0, 0, 0.3);

@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "../pages/login";
 import HomePage from "../pages/home";
 import Configs from "../pages/configs";
 import Articles from "../pages/articles";
@@ -21,16 +22,19 @@ import Article14 from "../components/specific/articles/article14";
 import TeamA from "../pages/teams/teamA";
 import TeamB from "../pages/teams/teamB";
 import Classes from "../pages/classes";
+import AllUsers from "../pages/users/allUsers";
 
 const AppRoutes = () => {
     return(
         <Router>
             <Routes>
-                <Route path="/" element={ <HomePage /> } />
+                <Route path="/" element={ <Login /> } />
+                <Route path="/home" element={ <HomePage /> } />
                 <Route path="/classes" element={ <Classes /> } />
                 <Route path="/articles" element={ <Articles /> } />
                 <Route path="/graphics" element={ <Graphics /> } />
                 <Route path="/configs" element={ <Configs /> } />
+                <Route path="/allUsers" element={ <AllUsers /> } />
 
                 {/* Articles Routes */}
                 <Route path="/article01" element={ <Article01 /> } />
