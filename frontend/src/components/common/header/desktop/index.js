@@ -29,7 +29,7 @@ export default function DesktopHeader() {
             <nav>
                 <NavBar link="/" svg={<LuHome />} title="Home" />
                 <NavBar link="/classes" svg={<LuBookMarked />} title="Classes" />
-                <NavBar link="/articles" svg={<MdOutlineArticle />} title="Articles" />
+                <NavBar link="/projects" svg={<MdOutlineArticle />} title="Projects" />
                 <NavBar 
                     onClick={() => handleToggle('settings')}
                     svg={<MdOutlinePeopleAlt />}

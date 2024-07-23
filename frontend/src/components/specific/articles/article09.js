@@ -1,23 +1,33 @@
 import React, { useEffect } from "react";
 import { Container, MainContent } from "../../../assets/styles/global";
 import Header from "../../common/header";
-import { Content, Text, Title } from "./styles";
+import { Text } from "./styles";
 import { MdOutlineArticle } from "react-icons/md";
+import Card from "../../common/card";
+import Content from "../content";
 
 export default function Article09(){
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
+    
     return(
         <Container>
             <Header />
             <MainContent $height="auto" $gap="2vh" $margin="3vw" $bottom="3vw" $heightMediaStyles="auto">
-                <Content>
-                    <Title>
-                        <MdOutlineArticle />
-                        <h4>Kaizen in Services</h4>
-                    </Title>
+                <Card height="60vh" width="60vw">
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/7ThCl8u60Qo?si=GoC3JwceygOP41E-"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        style={{ borderRadius: '1.5vh' }}
+                    />
+                </Card>
+                <Content icon={<MdOutlineArticle />} title="Kaizen in Services" height="auto">
                     <Text>
                         <span>
                             Kaizen, renowned for its principles of continuous improvement and waste reduction, is equally applicable and beneficial in service industries. Whether in healthcare, hospitality, financial services, or customer support, Kaizen methodologies empower service providers to streamline processes, improve service delivery, and elevate customer satisfaction levels.

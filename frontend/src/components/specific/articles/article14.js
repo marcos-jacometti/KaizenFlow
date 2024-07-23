@@ -1,23 +1,33 @@
 import React, { useEffect } from "react";
 import { Container, MainContent } from "../../../assets/styles/global";
 import Header from "../../common/header";
-import { Content, Text, Title } from "./styles";
+import { Text } from "./styles";
 import { MdOutlineArticle } from "react-icons/md";
+import Card from "../../common/card";
+import Content from "../content";
 
 export default function Article14(){
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
+    
     return(
         <Container>
             <Header />
             <MainContent $height="auto" $gap="2vh" $margin="3vw" $bottom="3vw" $heightMediaStyles="auto">
-                <Content>
-                    <Title>
-                        <MdOutlineArticle />
-                        <h4>Technologies and Kaizen</h4>
-                    </Title>
+                <Card height="60vh" width="60vw">
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/xNcO21FwMnk?si=5H7xzXoWrPp_pXuh"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        style={{ borderRadius: '1.5vh' }}
+                    />
+                </Card>
+                <Content icon={<MdOutlineArticle />} title="Technologies and Kaizen" height="auto">
                     <Text>
                         <span>
                             Technological advancements play a pivotal role in supporting and amplifying Kaizen initiatives. By leveraging modern technologies, organizations can drive more effective continuous improvement, streamline processes, and achieve higher levels of efficiency and quality. Here’s a look at how various technologies integrate with Kaizen principles to enhance operational excellence.

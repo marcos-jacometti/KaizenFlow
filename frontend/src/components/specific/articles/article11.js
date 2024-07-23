@@ -1,23 +1,33 @@
 import React, { useEffect } from "react";
 import { Container, MainContent } from "../../../assets/styles/global";
 import Header from "../../common/header";
-import { Content, Text, Title } from "./styles";
+import { Text } from "./styles";
 import { MdOutlineArticle } from "react-icons/md";
+import Card from "../../common/card";
+import Content from "../content";
 
 export default function Article11(){
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
+    
     return(
         <Container>
             <Header />
             <MainContent $height="auto" $gap="2vh" $margin="3vw" $bottom="3vw" $heightMediaStyles="auto">
-                <Content>
-                    <Title>
-                        <MdOutlineArticle />
-                        <h4>Interviews with Experts on Kaizen in Service Industries</h4>
-                    </Title>
+                <Card height="60vh" width="60vw">
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/Wc6bI16xuko?si=obN78pxCL67uFMIV"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        style={{ borderRadius: '1.5vh' }}
+                    />
+                </Card>
+                <Content icon={<MdOutlineArticle />} title="Interviews with Experts on Kaizen in Service Industries" height="auto">
                     <Text>
                         <span>
                             To gain deeper insights into the application and impact of Kaizen in service industries, interviews with experts provide valuable perspectives on best practices, challenges, and success stories. Here are some hypothetical interview excerpts with Kaizen experts from various service sectors.

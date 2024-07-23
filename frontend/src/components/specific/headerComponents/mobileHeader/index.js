@@ -31,16 +31,16 @@ export default function NavMobile({visible, setVisible}){
                 </button>
             </Close>
             <nav>
-            <NavBar link="/" svg={<LuHome />} title="Home" />
+                <NavBar link="/" svg={<LuHome />} title="Home" />
                 <NavBar link="/classes" svg={<LuBookMarked />} title="Classes" />
-                <NavBar link="/articles" svg={<MdOutlineArticle />} title="Articles" />
+                <NavBar link="/projects" svg={<MdOutlineArticle />} title="Projects" />
                 <NavBar 
                     onClick={() => handleToggle('settings')}
                     svg={<MdOutlinePeopleAlt />}
-                    title="Team Members"
+                    title="Members"
                     arrow={visibility.settings ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 >
-                    {visibility.settings && <SubMenu link="/teamA" linkTwo="/teamB" title="Team A" titleTwo="Team B" />}
+                    {visibility.settings && <SubMenu link="/teamA" linkTwo="/allUsers" title="Your User" titleTwo="All Users" />}
                 </NavBar>
                 <NavBar link="/graphics" svg={<BsClipboard2Data />} title="Charts" />
                 <NavBar link="/configs" svg={<GoGear />} title="Configurations" />

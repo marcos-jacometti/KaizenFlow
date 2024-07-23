@@ -1,23 +1,33 @@
 import React, { useEffect } from "react";
 import { Container, MainContent } from "../../../assets/styles/global";
 import Header from "../../common/header";
-import { Content, Text, Title } from "./styles";
+import { Text } from "./styles";
 import { MdOutlineArticle } from "react-icons/md";
+import Card from "../../common/card";
+import Content from "../content";
 
 export default function Article02(){
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
+    
     return(
         <Container>
             <Header />
             <MainContent $height="auto" $gap="2vh" $margin="3vw" $bottom="3vw" $heightMediaStyles="auto">
-                <Content>
-                    <Title>
-                        <MdOutlineArticle />
-                        <h4>Basic Principles of Kaizen</h4>
-                    </Title>
+                <Card height="60vh" width="60vw">
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/CDUEXDTCaeo?si=wlayyElr4U1dYuyy"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        style={{ borderRadius: '1.5vh' }}
+                    />
+                </Card>
+                <Content icon={<MdOutlineArticle />} title="Basic Principles of Kaizen" height="auto">
                     <Text>
                         <span>
                             Kaizen, rooted in the Japanese philosophy of continuous improvement, is underpinned by several fundamental principles that guide its application across various industries. These principles not only define the essence of Kaizen but also shape its effectiveness in fostering a culture of ongoing enhancement and efficiency.

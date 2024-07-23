@@ -1,23 +1,33 @@
 import React, { useEffect } from "react";
 import { Container, MainContent } from "../../../assets/styles/global";
 import Header from "../../common/header";
-import { Content, Text, Title } from "./styles";
+import { Text } from "./styles";
 import { MdOutlineArticle } from "react-icons/md";
+import Card from "../../common/card";
+import Content from "../content";
 
 export default function Article06(){
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
+    
     return(
         <Container>
             <Header />
             <MainContent $height="auto" $gap="2vh" $margin="3vw" $bottom="3vw" $heightMediaStyles="auto">
-                <Content>
-                    <Title>
-                        <MdOutlineArticle />
-                        <h4>Gemba: The Heart of Kaizen and Continuous Improvement</h4>
-                    </Title>
+                <Card height="60vh" width="60vw">
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/0-tmA22qjCI?si=zVy_o1tTFKTZ5tpQ"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        style={{ borderRadius: '1.5vh' }}
+                    />
+                </Card>
+                <Content icon={<MdOutlineArticle />} title="Gemba: The Heart of Kaizen" height="auto">
                     <Text>
                         <span>
                             Gemba, a Japanese term meaning "the actual place," refers to the physical location where value-creating work occurs. In the context of Kaizen and lean manufacturing, Gemba represents more than just a location—it embodies the philosophy of directly observing processes, engaging with frontline employees, and continuously improving operations at the source.

@@ -6,7 +6,7 @@ export const Container = styled.div`
     align-items: ${props => props.$align};
     justify-content: ${props => props.$justify};
     flex-direction: ${props => props.$direction};
-    padding: 3vh;
+    padding: ${props => props.$padding};
     height: ${props => props.$height};
     width: ${props => props.$width};
     border-radius: 1.5vh;
@@ -21,7 +21,6 @@ export const Container = styled.div`
     }
 
     h4 {
-        text-align: center;
         max-width: 15vw;
         ${H4MediaStyles};
     }

@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { Container, MainContent } from "../../../assets/styles/global";
 import Header from "../../common/header";
-import { Content, Text, Title } from "./styles";
+import { Text } from "./styles";
 import { MdOutlineArticle } from "react-icons/md";
+import Card from "../../common/card";
+import Content from "../content";
 
 export default function Article12(){
     useEffect(() => {
@@ -13,11 +15,19 @@ export default function Article12(){
         <Container>
             <Header />
             <MainContent $height="auto" $gap="2vh" $margin="3vw" $bottom="3vw" $heightMediaStyles="auto">
-                <Content>
-                    <Title>
-                        <MdOutlineArticle />
-                        <h4>Kaizen and Lean Manufacturing</h4>
-                    </Title>
+                <Card height="60vh" width="60vw">
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/xkUjX_c32c8?si=rijCoefGbsPGCwaZ"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        style={{ borderRadius: '1.5vh' }}
+                    />
+                </Card>
+                <Content icon={<MdOutlineArticle />} title="Kaizen and Lean Manufacturing" height="auto">
                     <Text>
                         <span>
                             Kaizen and Lean Manufacturing are two interrelated methodologies that focus on continuous improvement, waste reduction, and efficiency enhancement. Together, they form a powerful approach for achieving operational excellence in manufacturing and beyond.

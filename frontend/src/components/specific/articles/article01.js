@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { Container, MainContent } from "../../../assets/styles/global";
 import Header from "../../common/header";
-import { Content, Text, Title } from "./styles";
+import { Text } from "./styles";
 import { MdOutlineArticle } from "react-icons/md";
+import Card from "../../common/card";
+import Content from "../content";
 
 export default function Article01(){
     useEffect(() => {
@@ -13,11 +15,19 @@ export default function Article01(){
         <Container>
             <Header />
             <MainContent $height="auto" $gap="2vh" $margin="3vw" $bottom="3vw" $heightMediaStyles="auto">
-                <Content>
-                    <Title>
-                        <MdOutlineArticle />
-                        <h4>History and Origin</h4>
-                    </Title>
+                <Card height="60vh" width="70vw">
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/NFrwxzUhfNA?si=w0AZ09iK_p2wRZFA"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        style={{ borderRadius: '1.5vh' }}
+                    />
+                </Card>
+                <Content icon={<MdOutlineArticle />} title="History and Origin" height="auto">
                     <Text>
                         <span>
                             Kaizen, a concept deeply rooted in the philosophy of continuous improvement, finds its origins in Japan, particularly in the aftermath of World War II. The term "Kaizen" itself translates to "change for the better" or "continuous improvement" in Japanese, encapsulating its core principle of gradual, ongoing enhancement.
