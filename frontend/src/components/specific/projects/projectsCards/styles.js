@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { CardMediaStyles, ConfigMediaStyles, DetailsMediaStyles, PictureMediaStyles, UserDetailsMediaStyles } from "./responsive";
+import styled from 'styled-components';
+import { CardMediaStyles, ConfigMediaStyles, DetailsMediaStyles, ProjectDetailsMediaStyles } from './responsive';
 
 export const Container = styled.div`
     display: flex;
@@ -45,22 +45,12 @@ export const Card = styled.div`
     }
 `;
 
-export const Picture = styled.div`
-    background-image: url(${props => props.$background});
-    background-size: cover;
-    background-position: center;
-    height: 6vh;
-    width: 3vw;
-    border-radius: 50%;
-    ${PictureMediaStyles};
-`;
-
-export const UserDetails = styled.div`
+export const ProjectDetails = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 60vw;
-    ${UserDetailsMediaStyles};
+    ${ProjectDetailsMediaStyles};
 `;
 
 export const Details = styled.div`
@@ -72,7 +62,7 @@ export const Details = styled.div`
 `;
 
 export const Config = styled.div`
-    height: 6vh;
+     height: 6vh;
     width: 3vw;
     background-color: #f4f5f4;
     border-radius: 50%;

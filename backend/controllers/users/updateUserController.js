@@ -4,6 +4,7 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const { dbConnection } = require('../../db/dbConnection');
+const bcrypt = require('bcrypt');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -15,30 +16,40 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-router.put('/user/:id', upload.single('profilePicture'), (req, res) => {
+router.put('/user/:id', upload.single('profilePicture'), async (req, res) => {
     const { id } = req.params;
-    const { username, email, password, project } = req.body;
+    const { username, email, password } = req.body;
     const profilePicture = req.file ? req.file.filename : null;
 
-    const updateUserQuery = `
-        UPDATE users
-        SET 
-            username = COALESCE(?, username),
-            email = COALESCE(?, email),
-            password = COALESCE(?, password),
-            project = COALESCE(?, project),
-            profilePicture = COALESCE(?, profilePicture)
-        WHERE id = ?
-    `;
+    if (!password) {
+        return res.status(400).send('Password is required');
+    }
 
-    dbConnection.query(updateUserQuery, [username, email, password, project, profilePicture, id], (err, results) => {
-        if (err) {
-            console.error('Error updating user:', err);
-            return res.status(500).send('Error updating user');
-        }
+    try {
+        const hashedPassword = await bcrypt.hash(password, 10);
 
-        res.status(200).send('User updated successfully');
-    });
+        const updateUserQuery = `
+            UPDATE users
+            SET 
+                username = COALESCE(?, username),
+                email = COALESCE(?, email),
+                password = ?,
+                profilePicture = COALESCE(?, profilePicture)
+            WHERE id = ?
+        `;
+
+        dbConnection.query(updateUserQuery, [username, email, hashedPassword, profilePicture, id], (err, results) => {
+            if (err) {
+                console.error('Error updating user:', err);
+                return res.status(500).send('Error updating user');
+            }
+
+            res.status(200).send('User updated successfully');
+        });
+    } catch (err) {
+        console.error('Error hashing password:', err);
+        res.status(500).send('Internal server error');
+    }
 });
 
 module.exports = router;

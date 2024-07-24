@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { device } from "../../../assets/styles/mediaQueries";
+import { device } from "../../assets/styles/mediaQueries";
 
 export const NewUserMediaStyles = css`
     @media ${device.mobile}{

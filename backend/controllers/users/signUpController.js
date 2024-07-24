@@ -9,18 +9,18 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 router.post('/createUser', upload.single('profilePicture'), async (req, res) => {
-    const { username, email, password, project } = req.body;
+    const { username, email, password } = req.body;
     const profilePicture = req.file ? req.file.buffer : null;
 
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
 
         const createUserQuery = `
-            INSERT INTO users (username, email, password, project, profilePicture) 
-            VALUES (?, ?, ?, ?, ?)
+            INSERT INTO users (username, email, password, profilePicture) 
+            VALUES (?, ?, ?, ?)
         `;
 
-        dbConnection.query(createUserQuery, [username, email, hashedPassword, project, profilePicture], (err, results) => {
+        dbConnection.query(createUserQuery, [username, email, hashedPassword, profilePicture], (err, results) => {
             if (err) {
                 console.error('Error creating user:', err);
                 return res.status(500).send('Error creating user');

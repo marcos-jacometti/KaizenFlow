@@ -18,11 +18,10 @@ import Article11 from "../components/specific/articles/article11";
 import Article12 from "../components/specific/articles/article12";
 import Article13 from "../components/specific/articles/article13";
 import Article14 from "../components/specific/articles/article14";
-import TeamA from "../pages/teams/teamA";
-import TeamB from "../pages/teams/teamB";
 import Classes from "../pages/classes";
 import AllUsers from "../pages/users/allUsers";
 import Projects from "../pages/projects";
+import SelectedProject from "../pages/selectedProject";
 
 const AppRoutes = () => {
     return(
@@ -35,6 +34,7 @@ const AppRoutes = () => {
                 <Route path="/graphics" element={ <Graphics /> } />
                 <Route path="/configs" element={ <Configs /> } />
                 <Route path="/allUsers" element={ <AllUsers /> } />
+                <Route path="/selectedProjects/:projectId" element={ <SelectedProject /> } />
 
                 {/* Articles Routes */}
                 <Route path="/article01" element={ <Article01 /> } />
@@ -51,10 +51,6 @@ const AppRoutes = () => {
                 <Route path="/article12" element={ <Article12 /> } />
                 <Route path="/article13" element={ <Article13 /> } />
                 <Route path="/article14" element={ <Article14 /> } />
-
-                {/* Teams Routes */}
-                <Route path="/teamA" element={ <TeamA /> } />
-                <Route path="/teamB" element={ <TeamB /> } />
             </Routes>
         </Router>
     );

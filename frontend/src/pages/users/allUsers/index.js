@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Container, MainContent } from "../../../assets/styles/global";
 import Header from "../../../components/common/header";
-import { Features, NewUser, Search } from "./styles";
-import { FaSearch } from "react-icons/fa";
+import { Features, NewUser } from "./styles";
 import { MdOutlinePeopleAlt } from "react-icons/md";
 import { IoMdAddCircle } from "react-icons/io";
 import SignUp from "../../../components/specific/users/signUp";
 import Content from "../../../components/specific/content";
 import UserCard from "../../../components/specific/users/userCard";
+import SearchFeature from "../../../components/specific/searchFeature";
 
 export default function AllUsers() {
     const [visible, setVisible] = useState(false);
@@ -26,15 +26,11 @@ export default function AllUsers() {
             <Header />
             <MainContent $height="100vh" $heightMediaStyles="90.5vh">
                 <Features>
-                    <Search>
-                        <FaSearch />
-                        <input 
-                            type="text" 
-                            placeholder="Search for any user"
-                            value={searchTerm}
-                            onChange={handleSearchChange}
-                        />
-                    </Search>
+                    <SearchFeature
+                        placeholder="Search any user"
+                        value={searchTerm}
+                        onChange={handleSearchChange}
+                    />
                     <NewUser>
                         <button onClick={handleBtnClick}>
                             <IoMdAddCircle />

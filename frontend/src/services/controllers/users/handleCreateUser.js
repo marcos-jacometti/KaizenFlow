@@ -1,12 +1,11 @@
 import axios from "axios";
 
-export const handleCreateUser = async (username, email, password, project, profilePictureFile) => {
+export const handleCreateUser = async (username, email, password, profilePictureFile) => {
     try {
         const formData = new FormData();
         formData.append('username', username);
         formData.append('email', email);
         formData.append('password', password);
-        formData.append('project', project);
         formData.append('profilePicture', profilePictureFile);
 
         const response = await axios.post(`http://localhost:3000/users/createUser`, formData, {

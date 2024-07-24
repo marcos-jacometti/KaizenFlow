@@ -4,6 +4,11 @@ const { dbConnection } = require("./db/dbConnection");
 const signUpController = require("./controllers/users/signUpController");
 const usersRouter = require("./api/usersAPI");
 const userController = require("./controllers/users/updateUserController");
+const projectsRouter = require("./api/projectsAPI");
+const createProjectRouter = require("./controllers/projects/createProjects");
+const projectController = require("./controllers/projects/updateProject");
+const attendanceController = require("./controllers/projects/attendanceControllers");
+const attendanceAPI = require("./api/attendancesAPI");
 
 const app = express();
 app.use(cors());
@@ -20,6 +25,11 @@ dbConnection.connect((err) => {
 app.use('/users', signUpController);
 app.use('/api', usersRouter);
 app.use('/update', userController);
+app.use('/project', projectsRouter);
+app.use('/projects', createProjectRouter);
+app.use('/selected', projectController);
+app.use('/list', attendanceController);
+app.use('/attendance', attendanceAPI);
 
 app.get('/', (req, res) => {
     res.send('Node server is working');

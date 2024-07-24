@@ -45,9 +45,6 @@ export default function UserCard({searchTerm}) {
                             <h5>{user.username}</h5>
                         </Details>
                         <Details>
-                            <h5>Project: {user.project}</h5>
-                        </Details>
-                        <Details>
                             <h5>{user.email}</h5>
                         </Details>
                         <Config>

@@ -3,7 +3,7 @@ import { Close, Container, Inputs, StyledToast, Up } from "./styles";
 import { IoClose } from "react-icons/io5";
 import Input from "../../../common/input";
 import { FaCamera, FaLock, FaUser } from "react-icons/fa";
-import { MdConfirmationNumber, MdEmail } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
 import Button from "../../../common/button";
 import { toast } from "react-toastify";
 import axios from "axios";
@@ -13,7 +13,6 @@ export default function UpdateUser({ visible, setVisible, user }) {
     const [username, setUsername] = useState(user.username || "");
     const [email, setEmail] = useState(user.email || "");
     const [password, setPassword] = useState("");
-    const [project, setProject] = useState(user.project || "");
     const [profilePicture, setProfilePicture] = useState(null);
 
     const notify = (message, type) => {
@@ -21,11 +20,15 @@ export default function UpdateUser({ visible, setVisible, user }) {
     };
 
     const handleUpdate = async () => {
+        if (!password) {
+            notify("Password is required", "error");
+            return;
+        }
+
         const formData = new FormData();
         formData.append('username', username);
         formData.append('email', email);
         formData.append('password', password);
-        formData.append('project', project);
         if (profilePicture) {
             formData.append('profilePicture', profilePicture);
         }
@@ -47,7 +50,6 @@ export default function UpdateUser({ visible, setVisible, user }) {
         if (user) {
             setUsername(user.username);
             setEmail(user.email);
-            setProject(user.project);
         }
     }, [user]);
 
@@ -83,13 +85,6 @@ export default function UpdateUser({ visible, setVisible, user }) {
                         width="20vw"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <Input 
-                        placeholder="Number of Project"
-                        width="20vw"
-                        icon={<MdConfirmationNumber />}
-                        value={project}
-                        onChange={(e) => setProject(e.target.value)}
                     />
                     <Input 
                         placeholder="Profile Picture"

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ToastContainer } from "react-toastify";
-import { CloseMediaStyles, InputsMediaStyles, StyledToastMediaStyles, SvgMediaStyles, UpMediaStyles } from "./responsive";
+import { CloseMediaStyles, InputsMediaStyles, ReactSelectMediaStyles, StyledToastMediaStyles, SvgMediaStyles, UpMediaStyles } from "./responsive";
 
 export const Container = styled.div`
     ${props => props.$visible && `
@@ -61,6 +61,11 @@ export const Inputs = styled.div`
     height: 40vh;
     width: 80%;
     ${InputsMediaStyles};
+
+    .react-select__control {
+        width: 20vw;
+        ${ReactSelectMediaStyles};
+    }
 `;
 
 export const StyledToast = styled(ToastContainer)`

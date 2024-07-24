@@ -13,7 +13,6 @@ export default function SignUp({ visible, setVisible }) {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [project, setProject] = useState("");
     const [profilePicture, setProfilePicture] = useState(null);
 
     const notify = (message, type) => {
@@ -21,13 +20,13 @@ export default function SignUp({ visible, setVisible }) {
     };
 
     const handleClick = async () => {
-        if (!username || !email || !password || !project || !profilePicture) {
+        if (!username || !email || !password || !profilePicture) {
             notify("Please fill in all fields", "error");
             return;
         }
 
         try {
-            await handleCreateUser(username, email, password, project, profilePicture);
+            await handleCreateUser(username, email, password, profilePicture);
             notify("User created successfully", "success");
         } catch (error) {
             console.error("Error creating user:", error);
@@ -67,13 +66,6 @@ export default function SignUp({ visible, setVisible }) {
                         width="20vw"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <Input 
-                        placeholder="Number of Project"
-                        width="20vw"
-                        icon={<MdConfirmationNumber />}
-                        value={project}
-                        onChange={(e) => setProject(e.target.value)}
                     />
                     <Input 
                         placeholder="Profile Picture"

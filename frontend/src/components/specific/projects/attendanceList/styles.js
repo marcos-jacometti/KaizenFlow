@@ -1,17 +1,26 @@
 import styled from "styled-components";
 import { ToastContainer } from "react-toastify";
-import { ButtonsMediaStyles, ContentMediaStyles, H5MediaStyles, StyledToastMediaStyles, TitleMediaStyles } from "./responsive";
+import { H5MediaStyles, ListMediaStyles, StyledToastMediaStyles, TitleMediaStyles } from "./responsive";
 
-export const Content = styled.div`
+export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #fff;
+    height: 70vh;
+    width: 100%;
+`;
+
+export const List = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     border-radius: 1vh;
-    height: 40vh;
+    height: 50vh;
     width: 50vw;
-    ${ContentMediaStyles};
+    background-color: #f4f4f5;
+    margin-bottom: 4vh;
+    ${ListMediaStyles};
 `;
 
 export const Title = styled.div`
@@ -19,33 +28,28 @@ export const Title = styled.div`
     align-items: center;
     justify-content: center;
     width: 50vw;
-    height: 5vh;
+    height: 8vh;
     ${TitleMediaStyles};
     
     h5 {
         text-align: center;
-        width: 16.5vw;
+        width: 12vw;
         ${H5MediaStyles};
     }
 `;
 
-export const Buttons = styled.div`
-    display: flex;
-    gap: 2vw;
-    margin-top: 4vh;
-    ${ButtonsMediaStyles};
-`;
-
-export const Wrap = styled.div`
+export const Members = styled.div`
     display: flex;
     align-items: center;
     width: 50vw;
     height: 6.5vh;
     padding: 1rem;
-    ${ContentMediaStyles};
+    text-align: center;
+    font-size: 0.9vw;
+    ${ListMediaStyles};
 
     * {
-        width: 16.5vw;
+        width: 12vw;
         ${H5MediaStyles};
     }
 `;
