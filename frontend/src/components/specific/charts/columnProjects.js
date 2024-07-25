@@ -1,7 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ApexChart from "react-apexcharts";
+import axios from "axios";
 
-export default function ColumnProjects() {
+export default function ColumnProjects({ projectId }) {
+    const [actionsData, setActionsData] = useState([0, 0, 0, 0]);
+
+    useEffect(() => {
+        const fetchActionsData = async () => {
+            try {
+                const response = await axios.get(`http://localhost:3000/apiActions/actionsAPI/${projectId}`);
+                const actions = response.data;
+
+                let completed = 0;
+                let inProgress = 0;
+                let delayed = 0;
+                
+                actions.forEach(action => {
+                    if (action.status === "Completed") {
+                        completed++;
+                    } else if (action.status === "In Progress") {
+                        inProgress++;
+                    } else if (action.status === "Delayed") {
+                        delayed++;
+                    }
+                });
+
+                const total = completed + inProgress + delayed;
+
+                setActionsData([completed, inProgress, delayed, total]);
+            } catch (error) {
+                console.error("Error fetching action data:", error);
+            }
+        };
+
+        fetchActionsData();
+    }, [projectId]);
+
     const options = {
         chart: {
             type: 'bar',
@@ -23,7 +57,7 @@ export default function ColumnProjects() {
             colors: ['transparent']
         },
         xaxis: {
-            categories: ['Team A', 'Team B'],
+            categories: ['Completed', 'In Progress', 'Delayed', 'Total'],
         },
         yaxis: {
             title: {
@@ -40,16 +74,19 @@ export default function ColumnProjects() {
                 }
             }
         },
-        colors: ['#8906E680']
     };
 
     const series = [{
-        name: 'Projects',
-        data: [3, 2]
+        name: 'Actions',
+        data: actionsData,
+        color: function({ value, seriesIndex, dataPointIndex, w }) {
+            const colors = ['#4caf50', '#ffeb3b', '#f44336', '#3498db'];
+            return colors[dataPointIndex];
+        }
     }];
 
     return (
-        <div style={{ width: '100%', height: '95%' }}>
+        <div style={{ width: '100%', height: '80%' }}>
             <ApexChart
                 options={options}
                 series={series}

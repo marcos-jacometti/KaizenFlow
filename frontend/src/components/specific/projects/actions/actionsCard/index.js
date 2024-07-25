@@ -117,7 +117,7 @@ export default function Actions({ projectId }) {
                 <UpdateAction
                     visible={visible}
                     setVisible={setVisible}
-                    actionId={selectedAction?.id}
+                    actionId={selectedAction}
                     fetchActions={() => {
                         const fetchActions = async () => {
                             try {

@@ -27,6 +27,7 @@ router.put('/actions/:id', async (req, res) => {
                 console.error('Error updating action:', err);
                 return res.status(500).send('Error updating action');
             }
+
             res.status(200).send('Action updated successfully');
         });
     } catch (err) {

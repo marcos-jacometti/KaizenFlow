@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Container } from "./styles";
 import Card from "../../../common/card";
-import ColumnProjects from "../../charts/columnProjects";
 import AttendanceDetails from "../attendanceDetails";
 import RadialBarChart from "../../charts/radial";
+import ColumnProjects from "../../charts/columnProjects";
+import ActionChart from "../../charts/actionsChart";
 
 const getStatusColor = (percentage) => {
     if (percentage >= 80) return '#4caf50';
@@ -23,6 +24,14 @@ export default function Charts({ projectId }) {
                     percentage={totalAttendancePercentage} 
                     color={getStatusColor(totalAttendancePercentage)} 
                 />
+            </Card>
+            <Card height="40vh" width="30vw" justify="center" color="#000" direction="column" align="center">
+                <h4>Total of Project Actions</h4>
+                <ColumnProjects projectId={projectId}/>
+            </Card>
+            <Card height="40vh" width="30vw" justify="center" color="#000" direction="column" align="center">
+                <h4>% of Completed Actions</h4>
+                <ActionChart projectId={projectId}/>
             </Card>
         </Container>
     );

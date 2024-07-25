@@ -5,8 +5,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    max-height: 60vh;
-    min-height: 65vh;
+    max-height: 70vh;
+    min-height: 70vh;
     width: 100%;
     gap: 3vh;
     overflow-y: auto;
