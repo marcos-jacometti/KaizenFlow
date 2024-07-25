@@ -1,14 +1,14 @@
 import React from 'react';
 import ApexChart from 'react-apexcharts';
 
-export default function RadialBarChart() {
+export default function RadialBarChart({ percentage, color }) {
   const options = {
     chart: {
       height: 280,
       type: "radialBar",
     },
-    series: [60],
-    colors: ["#8906E6"],
+    series: [Math.min(percentage, 100)],
+    colors: [color],
     plotOptions: {
       radialBar: {
         startAngle: -90,
@@ -24,13 +24,16 @@ export default function RadialBarChart() {
           },
           value: {
             fontSize: "4vh",
-            show: true
+            show: true,
+            formatter: (val) => {
+              return `${Math.floor(val)}%`;
+            }
           }
         }
       }
     },
     fill: {
-      colors: ["#8906E6"]
+      colors: [color]
     },
     stroke: {
       lineCap: "butt"
@@ -39,7 +42,7 @@ export default function RadialBarChart() {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '40vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '30vh' }}>
       <ApexChart
         options={options}
         series={options.series}

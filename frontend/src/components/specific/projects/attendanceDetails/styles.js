@@ -4,11 +4,29 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-radius: 1vh;
-    height: 50vh;
+    border-radius: 1.5vh;
     width: 30vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 4vh;
+    max-height: 40vh;
+    min-height: 40vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        width: 0.4vw;
+        border-radius: 1vh;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 1vh;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+        border-radius: 1vh;
+    }
 `;
 
 export const Title = styled.div`

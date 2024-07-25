@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "./styles";
 import Card from "../../../common/card";
 import ColumnProjects from "../../charts/columnProjects";
 import AttendanceDetails from "../attendanceDetails";
+import RadialBarChart from "../../charts/radial";
 
-export default function Charts({ projectId }){
-    return(
+const getStatusColor = (percentage) => {
+    if (percentage >= 80) return '#4caf50';
+    if (percentage >= 50) return '#ffeb3b';
+    return '#f44336';
+};
+
+export default function Charts({ projectId }) {
+    const [totalAttendancePercentage, setTotalAttendancePercentage] = useState(0);
+
+    return (
         <Container>
-            <AttendanceDetails projectId={projectId}/>
+            <AttendanceDetails projectId={projectId} setTotalAttendancePercentage={setTotalAttendancePercentage} />
             <Card height="40vh" width="30vw" justify="center" color="#000" direction="column" align="center">
-                <ColumnProjects />
+                <h4>% of Participation</h4>
+                <RadialBarChart 
+                    percentage={totalAttendancePercentage} 
+                    color={getStatusColor(totalAttendancePercentage)} 
+                />
             </Card>
         </Container>
     );

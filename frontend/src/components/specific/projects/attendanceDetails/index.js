@@ -5,11 +5,11 @@ import axios from "axios";
 const getStatusBackgroundColor = (percentage) => {
     if (percentage >= 80) return '#4caf50';
     if (percentage >= 50) return '#ffeb3b';
-    if(percentage <= 49) return '#f44336';
+    if (percentage <= 49) return '#f44336';
     return '#f4f4f5'; 
 };
 
-export default function AttendanceDetails({ projectId }) {
+export default function AttendanceDetails({ projectId, setTotalAttendancePercentage }) {
     const [attendance, setAttendance] = useState([]);
     const [totalMeetings, setTotalMeetings] = useState(0);
     const [error, setError] = useState(null);
@@ -25,6 +25,10 @@ export default function AttendanceDetails({ projectId }) {
                 const response = await axios.get(`http://localhost:3000/attendance/project/${projectId}/attendance-details`);
                 setTotalMeetings(response.data.totalMeetings);
                 setAttendance(response.data.attendance);
+
+                const totalPresences = response.data.attendance.reduce((sum, member) => sum + member.present_count, 0);
+                const percentage = (totalPresences / response.data.totalMeetings) * 100;
+                setTotalAttendancePercentage(percentage);
             } catch (error) {
                 console.error("Error fetching attendance details:", error);
                 setError("Error fetching attendance details");
@@ -32,7 +36,7 @@ export default function AttendanceDetails({ projectId }) {
         };
 
         fetchAttendanceDetails();
-    }, [projectId]);
+    }, [projectId, setTotalAttendancePercentage]);
 
     return (
         <Container>

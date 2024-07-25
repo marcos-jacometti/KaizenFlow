@@ -6,7 +6,7 @@ import Header from "../../components/common/header";
 import Content from "../../components/specific/content";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { Features, ButtonGroup, Button } from "./styles";
-import Actions from "../../components/specific/projects/actions";
+import Actions from "../../components/specific/projects/actions/actionsCard";
 import AttendanceList from "../../components/specific/projects/attendanceList";
 import Charts from "../../components/specific/projects/charts";
 import Details from "../../components/specific/projects/details";
@@ -32,13 +32,13 @@ export default function SelectedProject() {
     const renderFeature = () => {
         switch (selectedFeature) {
             case 'actions':
-                return <Actions />;
+                return <Actions projectId={project.id} />;
             case 'attendanceList':
                 return <AttendanceList members={project.members} projectId={project.id} />;
             case 'charts':
                 return <Charts projectId={project.id} />;
             case 'details':
-                return <Details />;
+                return <Details project={project}/>;
             default:
                 return null;
         }
