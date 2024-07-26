@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
 import Select from 'react-select';
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 
 export default function Details({ project }) {
     const [projectNumber, setProjectNumber] = useState("");
@@ -62,24 +63,28 @@ export default function Details({ project }) {
 
     return (
         <Container>
+            <h4>Details about the project:</h4>
             <Inputs>
                 <Input 
                     placeholder="Project Number"
                     width="20vw"
                     value={projectNumber}
                     onChange={(e) => setProjectNumber(e.target.value)}
+                    icon={<AiOutlineFundProjectionScreen />}
                 />
                 <Input 
                     placeholder="Name"
                     width="20vw"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    icon={<AiOutlineFundProjectionScreen />}
                 />
                 <Input 
                     placeholder="Description"
                     width="20vw"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
+                    icon={<AiOutlineFundProjectionScreen />}
                 />
                 <Select
                     placeholder="Select Members"

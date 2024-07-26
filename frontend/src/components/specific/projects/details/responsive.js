@@ -1,22 +1,9 @@
 import { css } from "styled-components";
 import { device } from "../../../../assets/styles/mediaQueries";
 
-export const ListMediaStyles = css`
+export const SelectMediaStyles = css`
     @media ${device.mobile} {
-        width: 80vw;
-        font-size: 2.5vw;
-    }
-`;
-
-export const TitleMediaStyles = css`
-    @media ${device.mobile} {
-        width: 75vw;
-    }
-`;
-
-export const H5MediaStyles = css`
-    @media ${device.mobile} {
-        width: 30vw;
+        width: 60vw;
     }
 `;
 

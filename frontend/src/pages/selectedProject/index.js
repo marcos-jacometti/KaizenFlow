@@ -51,8 +51,8 @@ export default function SelectedProject() {
     return (
         <Container>
             <Header />
-            <MainContent $height="100vh" $heightMediaStyles="90.5vh">
-                <Content icon={<AiOutlineFundProjectionScreen />} title={project.name} height="90vh">
+            <MainContent $height="100vh" $heightMediaStyles="auto">
+                <Content icon={<AiOutlineFundProjectionScreen />} title={project.name} height="auto">
                     <Features>
                         <ButtonGroup>
                             <Button $isSelected={selectedFeature === 'actions'} onClick={() => setSelectedFeature('actions')}>Actions</Button>

@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
 import Select from 'react-select';
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 
 export default function UpdateAction({ visible, setVisible, actionId, fetchActions }) {
     const [title, setTitle] = useState("");
@@ -90,12 +91,14 @@ export default function UpdateAction({ visible, setVisible, actionId, fetchActio
                         width="20vw"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
+                        icon={<AiOutlineFundProjectionScreen />}
                     />
                     <Input
                         placeholder="Description"
                         width="20vw"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
+                        icon={<AiOutlineFundProjectionScreen />}
                     />
                     <Select
                         placeholder="Select Responsible"
@@ -110,6 +113,7 @@ export default function UpdateAction({ visible, setVisible, actionId, fetchActio
                         width="20vw"
                         value={dueDate}
                         onChange={(e) => setDueDate(e.target.value)}
+                        icon={<AiOutlineFundProjectionScreen />}
                     />
                     <Select
                         placeholder="Select Status"

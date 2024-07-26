@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ContainerMediaStyles, MembersMediaStyles, SpanMediaStyles, StatusMediaStyles, TitleMediaStyles } from "./responsive";
 
 export const Container = styled.div`
     display: flex;
@@ -12,6 +13,7 @@ export const Container = styled.div`
     overflow-y: auto;
     overflow-x: hidden;
     box-sizing: border-box;
+    ${ContainerMediaStyles};
 
     &::-webkit-scrollbar {
         width: 0.4vw;
@@ -36,6 +38,7 @@ export const Title = styled.div`
     width: 30vw;
     height: 8vh;
     border-bottom: 0.1vh solid #8906E61A;
+    ${TitleMediaStyles};
     
     h5 {
         text-align: center;
@@ -52,6 +55,7 @@ export const Members = styled.div`
     text-align: center;
     font-size: 0.9vw;
     border-bottom: 0.1vh solid #8906E61A;
+    ${MembersMediaStyles};
 
     span {
         display: flex;
@@ -59,6 +63,7 @@ export const Members = styled.div`
         justify-content: center;
         gap: 1vw;
         width: 15vw;
+        ${SpanMediaStyles};
     }
 `;
 
@@ -67,4 +72,5 @@ export const Status = styled.div`
     width: 1vw;
     border-radius: 50%;
     background-color: ${props => props.$background};
+    ${StatusMediaStyles};
 `;

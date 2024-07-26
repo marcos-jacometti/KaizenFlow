@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
 import Select from 'react-select';
-import { FaCalendarAlt } from "react-icons/fa";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 
 export default function CreateAction({ visible, setVisible, projectId }) {
     const [title, setTitle] = useState("");
@@ -74,14 +74,14 @@ export default function CreateAction({ visible, setVisible, projectId }) {
                 <Inputs>
                     <Input
                         placeholder="Title"
-                        icon={<FaCalendarAlt />}
+                        icon={<AiOutlineFundProjectionScreen />}
                         width="20vw"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                     />
                     <Input
                         placeholder="Description"
-                        icon={<FaCalendarAlt />}
+                        icon={<AiOutlineFundProjectionScreen />}
                         width="20vw"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
@@ -96,7 +96,7 @@ export default function CreateAction({ visible, setVisible, projectId }) {
                     <Input
                         type="date"
                         placeholder="Due Date"
-                        icon={<FaCalendarAlt />}
+                        icon={<AiOutlineFundProjectionScreen />}
                         width="20vw"
                         value={dueDate}
                         onChange={(e) => setDueDate(e.target.value)}

@@ -16,11 +16,30 @@ export const List = styled.div`
     align-items: center;
     flex-direction: column;
     border-radius: 1vh;
-    height: 50vh;
     width: 50vw;
     background-color: #f4f4f5;
     margin-bottom: 4vh;
+    max-height: 50vh;
+    min-height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
     ${ListMediaStyles};
+
+    &::-webkit-scrollbar {
+        width: 0.4vw;
+        border-radius: 1vh;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 1vh;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+        border-radius: 1vh;
+    }
 `;
 
 export const Title = styled.div`

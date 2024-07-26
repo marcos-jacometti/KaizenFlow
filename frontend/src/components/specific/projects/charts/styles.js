@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ContainerMediaStyles } from "./responsive";
 
 export const Container = styled.div`
     display: flex;
@@ -13,6 +14,7 @@ export const Container = styled.div`
     overflow-x: hidden;
     padding: 1.5rem;
     box-sizing: border-box;
+    ${ContainerMediaStyles};
 
     &::-webkit-scrollbar {
         width: 0.4vw;

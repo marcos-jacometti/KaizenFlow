@@ -13,6 +13,8 @@ const onlyUpdate = require("./controllers/projects/onlyUpdate");
 const actionsRouter = require("./api/actionsAPI");
 const actionsCreate = require("./controllers/actions/createActions");
 const updateAction = require("./controllers/actions/updateAction");
+const AllActions = require("./api/TotalActions");
+const AllAtendance = require("./api/TotalAttendance");
 
 const app = express();
 app.use(cors());
@@ -38,6 +40,8 @@ app.use('/only', onlyUpdate);
 app.use('/apiActions', actionsRouter);
 app.use('/apiCreate', actionsCreate);
 app.use('/apiActionsUpdate', updateAction);
+app.use('/all', AllActions);
+app.use('/attendanceDetails', AllAtendance);
 
 app.get('/', (req, res) => {
     res.send('Node server is working');

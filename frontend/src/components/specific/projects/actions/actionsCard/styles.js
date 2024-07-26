@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ButtonMediaStyles, CardMediaStyles, ConfigMediaStyles, ContainerMediaStyles, DetailsMediaStyles, FeaturesMediaStyles, NewActionMediaStyles, ProjectDetailsMediaStyles, TagMediaStyles } from "./responsive";
 
 export const Container = styled.div`
     display: flex;
@@ -12,6 +13,7 @@ export const Container = styled.div`
     overflow-x: hidden;
     padding: 1.5rem;
     box-sizing: border-box;
+    ${ContainerMediaStyles};
 
     &::-webkit-scrollbar {
         width: 0.4vw;
@@ -36,6 +38,7 @@ export const Card = styled.div`
     width: 65vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 1vh;
+    ${CardMediaStyles};
 
     &:hover {
         box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.4), 0 9px 10px 0 rgba(0, 0, 0, 0.3);
@@ -47,6 +50,7 @@ export const Tag = styled.div`
     background-color: ${props => props.$color || 'gray'};
     width: 1vw;
     border-radius: 0.3vh;
+    ${TagMediaStyles};
 `;
 
 export const ProjectDetails = styled.div`
@@ -54,6 +58,7 @@ export const ProjectDetails = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 60vw;
+    ${ProjectDetailsMediaStyles};
 `;
 
 export const Details = styled.div`
@@ -61,6 +66,7 @@ export const Details = styled.div`
     align-items: center;
     width: 18vw;
     padding: 1rem;
+    ${DetailsMediaStyles};
 `;
 
 export const Config = styled.div`
@@ -68,6 +74,7 @@ export const Config = styled.div`
     width: 3vw;
     background-color: #f4f5f4;
     border-radius: 50%;
+    ${ConfigMediaStyles};
 
     & > button {
         background-color: transparent;
@@ -86,6 +93,7 @@ export const Features = styled.div`
     width: 90%;
     gap: 1vw;
     margin-bottom: 4vh;
+    ${FeaturesMediaStyles};
 `;
 
 export const NewAction = styled.div`
@@ -94,6 +102,7 @@ export const NewAction = styled.div`
     width: 3vw;
     border-radius: 1vh;
     background-color: #8906E6;
+    ${NewActionMediaStyles};
 
 
     &:hover {
@@ -109,6 +118,7 @@ export const NewAction = styled.div`
         width: 100%;
         font-size: 1.5vw;
         cursor: pointer;
+        ${ButtonMediaStyles};
         
         svg {
             fill: #fff;

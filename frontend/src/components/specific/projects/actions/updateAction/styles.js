@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ToastContainer } from "react-toastify";
+import { CloseMediaStyles, InputsMediaStyles, SelectMediaStyles, StyledToastMediaStyles, SvgMediaStyles, UpMediaStyles } from "./responsive";
 
 export const Container = styled.div`
     ${props => props.$visible && `
@@ -26,12 +27,14 @@ export const Up = styled.div`
     border-radius: 2vh;
     position: relative;
     margin-left: 18vw;
+    ${UpMediaStyles};
 `;
 
 export const Close = styled.div`
     position: absolute;
     right: 2vw;
     top: 3vh;
+    ${CloseMediaStyles};
 
     :hover {
         fill: #8906E6;
@@ -45,6 +48,7 @@ export const Close = styled.div`
 
     svg {
         font-size: 2vw;
+        ${SvgMediaStyles};
     }
 `;
 
@@ -56,15 +60,18 @@ export const Inputs = styled.div`
     gap: 1.5vw;
     height: 40vh;
     width: 80%;
+    ${InputsMediaStyles};
 
     .react-select__control {
         width: 20vw;
+        ${SelectMediaStyles};
     }
 `;
 
 export const StyledToast = styled(ToastContainer)`
     &&&.Toastify__toast-container {
         width: 20vw;
+        ${StyledToastMediaStyles};
     }
 
     .Toastify__toast {

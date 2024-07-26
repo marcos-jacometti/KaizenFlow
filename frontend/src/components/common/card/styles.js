@@ -21,7 +21,7 @@ export const Container = styled.div`
     }
 
     h4 {
-        max-width: 15vw;
+        max-width: 18vw;
         ${H4MediaStyles};
     }
 `;
