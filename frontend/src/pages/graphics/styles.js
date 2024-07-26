@@ -8,6 +8,6 @@ export const Content = styled.div`
     flex-wrap: wrap;
     gap: 1.6vw;
     height: 100%;
-    width: 95%;
+    width: 100%;
     ${ContentMediaStyles};
 `;

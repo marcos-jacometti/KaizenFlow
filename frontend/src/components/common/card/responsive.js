@@ -11,5 +11,6 @@ export const ContainerMediaStyles = css`
 export const H4MediaStyles = css`
     @media ${device.mobile} {
         min-width: 60vw;
+        text-align: center;
     }
 `;
