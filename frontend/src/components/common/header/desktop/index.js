@@ -27,7 +27,7 @@ export default function DesktopHeader() {
         <HeaderContainer>
             <Logo height="12vh" width="16vw" />
             <nav>
-                <NavBar link="/" svg={<LuHome />} title="Home" />
+                <NavBar link="/home" svg={<LuHome />} title="Home" />
                 <NavBar link="/classes" svg={<LuBookMarked />} title="Classes" />
                 <NavBar link="/projects" svg={<MdOutlineArticle />} title="Projects" />
                 <NavBar 

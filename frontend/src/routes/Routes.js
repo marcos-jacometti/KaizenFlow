@@ -27,8 +27,8 @@ const AppRoutes = () => {
     return(
         <Router>
             <Routes>
-                {/* <Route path="/" element={ <Login /> } /> */}
-                <Route path="/" element={ <HomePage /> } />
+                <Route path="/" element={ <Login /> } />
+                <Route path="/home" element={ <HomePage /> } />
                 <Route path="/classes" element={ <Classes /> } />
                 <Route path="/projects" element={ <Projects /> } />
                 <Route path="/graphics" element={ <Graphics /> } />
@@ -36,7 +36,6 @@ const AppRoutes = () => {
                 <Route path="/allUsers" element={ <AllUsers /> } />
                 <Route path="/selectedProjects/:projectId" element={ <SelectedProject /> } />
 
-                {/* Articles Routes */}
                 <Route path="/article01" element={ <Article01 /> } />
                 <Route path="/article02" element={ <Article02 /> } />
                 <Route path="/article03" element={ <Article03 /> } />

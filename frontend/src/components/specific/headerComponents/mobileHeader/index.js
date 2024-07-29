@@ -31,7 +31,7 @@ export default function NavMobile({visible, setVisible}){
                 </button>
             </Close>
             <nav>
-                <NavBar link="/" svg={<LuHome />} title="Home" />
+            <NavBar link="/home" svg={<LuHome />} title="Home" />
                 <NavBar link="/classes" svg={<LuBookMarked />} title="Classes" />
                 <NavBar link="/projects" svg={<MdOutlineArticle />} title="Projects" />
                 <NavBar 

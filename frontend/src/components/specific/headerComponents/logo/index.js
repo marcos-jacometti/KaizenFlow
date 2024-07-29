@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Logo({height, width}){
     return(
-        <Link to="/">
+        <Link to="/home">
             <LogoContainer height={height} width={width} />
         </Link>
     );
