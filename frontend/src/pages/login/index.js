@@ -1,11 +1,27 @@
 import React from "react";
-import { BackgroundLogo, Container, Inputs, Log } from "./styles";
+import { BackgroundLogo, Container, Inputs, Log, StyledToast } from "./styles";
 import { FaLock, FaUser } from "react-icons/fa";
 import Input from "../../components/common/input";
 import Button from "../../components/common/button";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { handleLogin } from "../../services/controllers/users/handleLogin";
 
-export default function Login(){
-    return(
+export default function Login() {
+    const notify = (message, type) => {
+        toast(message, { type: type });
+    };
+
+    const handleClick = async () => {
+        try {
+            await handleLogin();
+            notify("Login was a success", "success");
+        } catch (error) {
+            notify("Incorrect email or password", "error");
+        }
+    };
+
+    return (
         <Container>
             <Log>
                 <BackgroundLogo />
@@ -26,8 +42,9 @@ export default function Login(){
                         title="Enter" 
                         background="#8906E680"
                         border="none"
-                    
+                        onClick={handleClick}
                     />
+                    <StyledToast />
                 </Inputs>
             </Log>
         </Container>

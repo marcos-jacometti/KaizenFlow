@@ -15,6 +15,7 @@ const actionsCreate = require("./controllers/actions/createActions");
 const updateAction = require("./controllers/actions/updateAction");
 const AllActions = require("./api/TotalActions");
 const AllAtendance = require("./api/TotalAttendance");
+const loginController = require("./controllers/users/loginController");
 
 const app = express();
 app.use(cors());
@@ -42,6 +43,7 @@ app.use('/apiCreate', actionsCreate);
 app.use('/apiActionsUpdate', updateAction);
 app.use('/all', AllActions);
 app.use('/attendanceDetails', AllAtendance);
+app.use('/token', loginController);
 
 app.get('/', (req, res) => {
     res.send('Node server is working');

@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { BackgroundLogoMediaStyles, InputsMediaStyles, LogMediaStyles } from "./responsive";
+import { BackgroundLogoMediaStyles, InputsMediaStyles, LogMediaStyles, StyledToastMediaStyles } from "./responsive";
 import img from "../../assets/images/logo480x180.png"
+import { ToastContainer } from "react-toastify";
 
 export const Container = styled.div`
     display: flex;
@@ -40,4 +41,16 @@ export const Inputs = styled.div`
     width: 80%;
     height: 30vh;
     ${InputsMediaStyles};
+`;
+
+export const StyledToast = styled(ToastContainer)`
+    &&&.Toastify__toast-container {
+        width: 20vw;
+        ${StyledToastMediaStyles};
+    }
+
+    .Toastify__toast {
+        background: #fff;
+        color: #000;
+    }
 `;

@@ -36,7 +36,7 @@ export default function DesktopHeader() {
                     title="Members"
                     arrow={visibility.settings ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 >
-                    {visibility.settings && <SubMenu link="/teamA" linkTwo="/allUsers" title="Your User" titleTwo="All Users" />}
+                    {visibility.settings && <SubMenu link="/user" linkTwo="/allUsers" title="Your User" titleTwo="All Users" />}
                 </NavBar>
                 <NavBar link="/graphics" svg={<BsClipboard2Data />} title="Charts" />
                 <NavBar link="/configs" svg={<GoGear />} title="Configurations" />

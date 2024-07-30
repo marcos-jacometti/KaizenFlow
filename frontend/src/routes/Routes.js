@@ -22,34 +22,192 @@ import Classes from "../pages/classes";
 import AllUsers from "../pages/users/allUsers";
 import Projects from "../pages/projects";
 import SelectedProject from "../pages/selectedProject";
+import User from "../pages/users/user";
+import PrivateRoute from "./PrivateRoute";
 
 const AppRoutes = () => {
     return(
         <Router>
             <Routes>
-                <Route path="/" element={ <Login /> } />
-                <Route path="/home" element={ <HomePage /> } />
-                <Route path="/classes" element={ <Classes /> } />
-                <Route path="/projects" element={ <Projects /> } />
-                <Route path="/graphics" element={ <Graphics /> } />
-                <Route path="/configs" element={ <Configs /> } />
-                <Route path="/allUsers" element={ <AllUsers /> } />
-                <Route path="/selectedProjects/:projectId" element={ <SelectedProject /> } />
+                <Route path="/" element={<Login />} />
+                
+                <Route 
+                    path="/home" 
+                    element={
+                        <PrivateRoute>
+                            <HomePage />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/classes" 
+                    element={
+                        <PrivateRoute>
+                            <Classes />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/projects" 
+                    element={
+                        <PrivateRoute>
+                            <Projects />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/graphics" 
+                    element={
+                        <PrivateRoute>
+                            <Graphics />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/configs" 
+                    element={
+                        <PrivateRoute>
+                            <Configs />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/allUsers" 
+                    element={
+                        <PrivateRoute>
+                            <AllUsers />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/user" 
+                    element={
+                        <PrivateRoute>
+                            <User />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/selectedProjects/:projectId" 
+                    element={
+                        <PrivateRoute>
+                            <SelectedProject />
+                        </PrivateRoute>
+                    } 
+                />
 
-                <Route path="/article01" element={ <Article01 /> } />
-                <Route path="/article02" element={ <Article02 /> } />
-                <Route path="/article03" element={ <Article03 /> } />
-                <Route path="/article04" element={ <Article04 /> } />
-                <Route path="/article05" element={ <Article05 /> } />
-                <Route path="/article06" element={ <Article06 /> } />
-                <Route path="/article07" element={ <Article07 /> } />
-                <Route path="/article08" element={ <Article08 /> } />
-                <Route path="/article09" element={ <Article09 /> } />
-                <Route path="/article10" element={ <Article10 /> } />
-                <Route path="/article11" element={ <Article11 /> } />
-                <Route path="/article12" element={ <Article12 /> } />
-                <Route path="/article13" element={ <Article13 /> } />
-                <Route path="/article14" element={ <Article14 /> } />
+                <Route 
+                    path="/article01" 
+                    element={
+                        <PrivateRoute>
+                            <Article01 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article02" 
+                    element={
+                        <PrivateRoute>
+                            <Article02 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article03" 
+                    element={
+                        <PrivateRoute>
+                            <Article03 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article04" 
+                    element={
+                        <PrivateRoute>
+                            <Article04 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article05" 
+                    element={
+                        <PrivateRoute>
+                            <Article05 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article06" 
+                    element={
+                        <PrivateRoute>
+                            <Article06 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article07" 
+                    element={
+                        <PrivateRoute>
+                            <Article07 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article08" 
+                    element={
+                        <PrivateRoute>
+                            <Article08 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article09" 
+                    element={
+                        <PrivateRoute>
+                            <Article09 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article10" 
+                    element={
+                        <PrivateRoute>
+                            <Article10 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article11" 
+                    element={
+                        <PrivateRoute>
+                            <Article11 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article12" 
+                    element={
+                        <PrivateRoute>
+                            <Article12 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article13" 
+                    element={
+                        <PrivateRoute>
+                            <Article13 />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/article14" 
+                    element={
+                        <PrivateRoute>
+                            <Article14 />
+                        </PrivateRoute>
+                    } 
+                />
             </Routes>
         </Router>
     );

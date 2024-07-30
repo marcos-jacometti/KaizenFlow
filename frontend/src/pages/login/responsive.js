@@ -20,3 +20,11 @@ export const InputsMediaStyles = css`
         gap: 4vh;
     }
 `;
+
+export const StyledToastMediaStyles = css`
+    @media ${device.mobile} {
+        width: 80vw;
+        top: 10vh;
+        padding: 1rem;
+    }
+`;
