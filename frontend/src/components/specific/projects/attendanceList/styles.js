@@ -17,7 +17,7 @@ export const List = styled.div`
     flex-direction: column;
     border-radius: 1vh;
     width: 50vw;
-    background-color: #f4f4f5;
+    background-color: ${props => props.theme.backgroundColor};
     margin-bottom: 4vh;
     max-height: 50vh;
     min-height: 50vh;
@@ -74,12 +74,12 @@ export const Members = styled.div`
 `;
 
 export const StyledToast = styled(ToastContainer)`
-     &&&.Toastify__toast-container {
+    &&&.Toastify__toast-container {
         width: 20vw;
         ${StyledToastMediaStyles};
     }
     .Toastify__toast {
-        background: #fff;
-        color: #000;
+        background: ${props => props.theme.backgroundColor2};
+        color: ${props => props.color};
     }
 `;

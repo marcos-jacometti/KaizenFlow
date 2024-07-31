@@ -20,5 +20,6 @@ export const Button = styled.button`
     border: none;
     background-color: transparent;
     cursor: pointer;
+    color: ${props => props.theme.color};
     border-bottom: ${({ $isSelected }) => ($isSelected ? "0.5vh solid #8906E6" : "none")};
 `;

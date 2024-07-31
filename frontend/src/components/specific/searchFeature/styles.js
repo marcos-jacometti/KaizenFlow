@@ -15,6 +15,7 @@ export const Search = styled.div`
     
     svg{
         font-size: 1vw;
+        fill: ${props => props.theme.fill2};
         ${SvgMediaStyles};
     }
 

@@ -9,7 +9,7 @@ export const HelpContainer = styled.div`
     height: 25vh;
     width: 16vw;
     border-radius: 1vh;
-    color: #8906E6;
+    color: ${props => props.theme.color2};
     text-align: center;
 
     span {

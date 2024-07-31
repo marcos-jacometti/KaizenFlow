@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
     align-items: center;
     height: 100vh;
     width: 18vw;
-    background-color: #fff;
+    background-color: ${props => props.theme.backgroundColor2};
 
     nav {
         height: 60vh;

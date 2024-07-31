@@ -22,17 +22,23 @@ export const Inputs = styled.div`
 
     .react-select__control {
         width: 20vw;
+        background-color: ${props => props.theme.backgroundColor2};
+        color: ${props => props.theme.color};
         ${SelectMediaStyles};
+    }
+
+    .react-select__option {
+        background-color: ${props => props.theme.backgroundColor2};
     }
 `;
 
 export const StyledToast = styled(ToastContainer)`
-     &&&.Toastify__toast-container {
+    &&&.Toastify__toast-container {
         width: 20vw;
         ${StyledToastMediaStyles};
     }
     .Toastify__toast {
-        background: #fff;
-        color: #000;
+        background: ${props => props.theme.backgroundColor2};
+        color: ${props => props.color};
     }
 `;

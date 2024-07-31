@@ -6,7 +6,8 @@ export const Container = styled.div`
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background-color: #fff;
+    background-color: ${props => props.theme.backgroundColor2};
+    color: ${props => props.theme.color};
     border-radius: 1vh;
     height: ${props => props.$height};
     width: 70vw;

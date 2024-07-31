@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+const getBackground = (theme) => theme.backgroundColor;
+
 export const Container = styled.div`
      ${props => props.$visible && `
         display: flex;
@@ -10,7 +12,7 @@ export const Container = styled.div`
         left: 0;
         width: 85vw;
         height: 100vh;
-        background-color: #fff;
+        background-color: ${getBackground(props.theme)};
         z-index: 100;
     `}
 `;

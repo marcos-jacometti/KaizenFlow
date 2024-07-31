@@ -6,10 +6,11 @@ export const Content = styled.div`
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background-color: #fff;
+    background-color: ${props => props.theme.backgroundColor2};
     border-radius: 1vh;
     height: 20vh;
     width: 30vw;
+    color: ${props => props.theme.color};
     ${ContentMediaStyles};
 `;
 

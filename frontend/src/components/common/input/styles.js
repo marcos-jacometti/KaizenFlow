@@ -24,6 +24,7 @@ export const InputContainer = styled.div`
         width: 100%;
         font-size: 0.8vw;
         outline: none;
+        color: ${props => props.theme.color};
         ${inputMediaStyles};
     }
 `;

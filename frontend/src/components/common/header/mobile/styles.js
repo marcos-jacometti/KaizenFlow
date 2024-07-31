@@ -6,7 +6,7 @@ export const Container = styled.div`
     justify-content: space-evenly;
     width: 100vw;
     height: 9.5vh;
-    background-color: #fff;
+    background-color: ${props => props.theme.backgroundColor2};
 `;
 
 export const Menu = styled.div`
@@ -20,6 +20,7 @@ export const Menu = styled.div`
 
         svg {
             font-size: 6.5vw;
+            fill: ${props => props.theme.fill2};
         }
     }
 `;

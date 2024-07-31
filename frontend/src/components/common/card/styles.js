@@ -14,6 +14,8 @@ export const Container = styled.div`
     cursor: pointer;
     background: url(${props => props.$background}) center / cover;
     color: ${props => props.$color};
+    color: ${props => props.theme.colorX};
+    background-color: ${props => props.theme.backgroundColor2};
     ${ContainerMediaStyles};
 
     &:hover {

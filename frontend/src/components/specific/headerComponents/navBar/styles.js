@@ -10,6 +10,7 @@ export const NavBarContainer = styled.div`
     margin-bottom: 0.5rem;
     border-radius: 1vh;
     background-color: ${props => props.$isActive ? '#8906E61A' : 'transparent'};
+    color: ${props => props.theme.color};
     ${navBarContainerMediaStyles};
 
     button {

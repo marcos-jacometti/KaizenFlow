@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         font-family: 'MontserratRegular';
-        background-color: #f4f5f4;
+        background-color:  ${(props) => props.theme.backgroundColor};
         
         .link {
             text-decoration: none;

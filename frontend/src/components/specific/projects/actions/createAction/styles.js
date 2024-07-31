@@ -21,7 +21,7 @@ export const Up = styled.div`
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    background-color: #fff;
+    background-color: ${props => props.theme.backgroundColor2};
     height: 70vh;
     width: 30vw;
     border-radius: 2vh;
@@ -48,6 +48,7 @@ export const Close = styled.div`
 
     svg {
         font-size: 2vw;
+        fill: ${props => props.theme.fill2};
         ${SvgMediaStyles};
     }
 `;
@@ -64,18 +65,23 @@ export const Inputs = styled.div`
 
     .react-select__control {
         width: 20vw;
+        background-color: ${props => props.theme.backgroundColor2};
+        color: ${props => props.theme.color};
         ${SelectMediaStyles};
+    }
+
+    .react-select__option {
+        background-color: ${props => props.theme.backgroundColor2};
     }
 `;
 
 export const StyledToast = styled(ToastContainer)`
     &&&.Toastify__toast-container {
         width: 20vw;
-        ${StyledToastMediaStyles}
+        ${StyledToastMediaStyles};
     }
-
     .Toastify__toast {
-        background: #fff;
-        color: #000;
+        background: ${props => props.theme.backgroundColor2};
+        color: ${props => props.color};
     }
 `;
