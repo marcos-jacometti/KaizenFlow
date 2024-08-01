@@ -26,10 +26,10 @@ export default function Actions({ projectId }) {
     useEffect(() => {
         const fetchActionsAndUsers = async () => {
             try {
-                const actionsResponse = await axios.get(`http://localhost:3000/apiActions/actionsAPI/${projectId}`);
+                const actionsResponse = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/apiActions/actionsAPI/${projectId}`);
                 setActions(actionsResponse.data);
 
-                const usersResponse = await axios.get('http://localhost:3000/api/users');
+                const usersResponse = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/users`);
                 setUsers(usersResponse.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -121,7 +121,7 @@ export default function Actions({ projectId }) {
                     fetchActions={() => {
                         const fetchActions = async () => {
                             try {
-                                const response = await axios.get(`http://localhost:3000/apiActions/actionsAPI/${projectId}`);
+                                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/apiActions/actionsAPI/${projectId}`);
                                 setActions(response.data);
                             } catch (error) {
                                 console.error('Error fetching actions:', error);

@@ -9,7 +9,7 @@ export default function ProjectsUsersColumnChart() {
     useEffect(() => {
         const fetchProjectsCount = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/project/projects');
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/project/projects`);
                 setProjectsCount(response.data.length);
             } catch (error) {
                 console.error("Error fetching projects data:", error);
@@ -18,7 +18,7 @@ export default function ProjectsUsersColumnChart() {
 
         const fetchUsersCount = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/users');
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/users`);
                 setUsersCount(response.data.length);
             } catch (error) {
                 console.error("Error fetching users data:", error);

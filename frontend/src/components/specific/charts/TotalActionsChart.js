@@ -8,7 +8,7 @@ export default function AllActions() {
   useEffect(() => {
     const fetchActionsData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/all/AllActions`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/all/AllActions`);
         const actions = response.data;
 
         let completed = 0;

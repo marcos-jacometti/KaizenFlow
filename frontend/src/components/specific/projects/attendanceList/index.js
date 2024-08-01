@@ -45,7 +45,7 @@ export default function AttendanceList({ members, projectId }) {
         }
 
         try {
-            const response = await axios.post("http://localhost:3000/list/attendance", {
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/list/attendance`, {
                 projectId,
                 attendance
             });

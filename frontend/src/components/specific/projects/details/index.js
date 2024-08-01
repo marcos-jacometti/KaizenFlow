@@ -26,7 +26,7 @@ export default function Details({ project }) {
         }
 
         try {
-            await axios.put(`http://localhost:3000/only/project/${project.id}`, {
+            await axios.put(`${process.env.REACT_APP_BACKEND_URL}/only/project/${project.id}`, {
                 project_number: projectNumber,
                 name,
                 description,
@@ -51,7 +51,7 @@ export default function Details({ project }) {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/users");
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/users`);
                 setAllUsers(response.data.map(user => ({ value: user.id, label: user.username })));
             } catch (error) {
                 console.error("Error fetching users:", error);
