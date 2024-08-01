@@ -29,8 +29,7 @@ const AppRoutes = () => {
     return(
         <Router>
             <Routes>
-                <Route path="/" element={<User />} />
-                
+                <Route path="/" element={<AllUsers />} />
                 <Route 
                     path="/home" 
                     element={
@@ -71,22 +70,22 @@ const AppRoutes = () => {
                         </PrivateRoute>
                     } 
                 />
-                <Route 
+                {/* <Route 
                     path="/allUsers" 
                     element={
                         <PrivateRoute>
                             <AllUsers />
                         </PrivateRoute>
                     } 
+                /> */}
+                <Route 
+                    path="/user" 
+                    element={
+                        <PrivateRoute>
+                            <User />
+                        </PrivateRoute>
+                    } 
                 />
-                {/* <Route 
-                //     path="/user" 
-                //     element={
-                //         <PrivateRoute>
-                //             <User />
-                //         </PrivateRoute>
-                //     } 
-                // /> */}
                 <Route 
                     path="/selectedProjects/:projectId" 
                     element={
