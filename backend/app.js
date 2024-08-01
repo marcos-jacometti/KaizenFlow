@@ -18,7 +18,9 @@ const AllAtendance = require("./api/TotalAttendance");
 const loginController = require("./controllers/users/loginController");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://kaizenflow.netlify.app',
+}));
 app.use(express.json());
 
 dbConnection.connect((err) => {
