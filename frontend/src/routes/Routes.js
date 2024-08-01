@@ -29,7 +29,7 @@ const AppRoutes = () => {
     return(
         <Router>
             <Routes>
-                <Route path="/" element={<AllUsers />} />
+                <Route path="/" element={<Login />} />
                 <Route 
                     path="/home" 
                     element={
@@ -70,14 +70,14 @@ const AppRoutes = () => {
                         </PrivateRoute>
                     } 
                 />
-                {/* <Route 
+                <Route 
                     path="/allUsers" 
                     element={
                         <PrivateRoute>
                             <AllUsers />
                         </PrivateRoute>
                     } 
-                /> */}
+                />
                 <Route 
                     path="/user" 
                     element={
