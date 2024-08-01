@@ -29,7 +29,7 @@ const AppRoutes = () => {
     return(
         <Router>
             <Routes>
-                <Route path="/" element={<Login />} />
+                <Route path="/" element={<User />} />
                 
                 <Route 
                     path="/home" 
@@ -79,14 +79,14 @@ const AppRoutes = () => {
                         </PrivateRoute>
                     } 
                 />
-                <Route 
-                    path="/user" 
-                    element={
-                        <PrivateRoute>
-                            <User />
-                        </PrivateRoute>
-                    } 
-                />
+                {/* <Route 
+                //     path="/user" 
+                //     element={
+                //         <PrivateRoute>
+                //             <User />
+                //         </PrivateRoute>
+                //     } 
+                // /> */}
                 <Route 
                     path="/selectedProjects/:projectId" 
                     element={
