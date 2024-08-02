@@ -7,8 +7,6 @@ require('dotenv').config();
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
-console.log('JWT_SECRET:', JWT_SECRET); // Verifica se JWT_SECRET está sendo carregado
-
 router.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
@@ -26,18 +24,14 @@ router.post('/login', async (req, res) => {
             }
 
             if (results.length === 0) {
-                console.log('User not found');
                 return res.status(404).send('User not found');
             }
 
             const user = results[0];
-            console.log('User found:', user);
 
             const passwordMatch = await bcrypt.compare(password, user.password);
-            console.log('Password match:', passwordMatch);
 
             if (!passwordMatch) {
-                console.log('Incorrect password');
                 return res.status(401).send('Incorrect password');
             }
 
@@ -57,7 +51,6 @@ router.post('/login', async (req, res) => {
                 { expiresIn: '2h' }
             );
 
-            console.log('Token generated:', token);
             res.status(200).json({ token });
         });
     } catch (err) {
