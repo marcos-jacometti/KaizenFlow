@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+<div align="center">
+    <img src="frontend/src/assets/images/logo480x180.png" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    ![GitHub top language](https://img.shields.io/github/languages/top/marcos-jacometti/KaizenFlow)
+    ![GitHub repo size](https://img.shields.io/github/repo-size/marcos-jacometti/KaizenFlow)
+    ![GitHub last commit](https://img.shields.io/github/last-commit/marcos-jacometti/KaizenFlow)
+</div>
 
-## Available Scripts
+## Welcome to the KaizenFlow Engineering ⚙️
 
-In the project directory, you can run:
+Create and manage projects, members, actions, meetings and classes of your continuous improvement system. With the KaizenFlow Engineering you can have the best Kaizen program in your company or life. 
 
-### `npm start`
+You'll have classes: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<div align="center">
+    <img src="frontend/src/assets/images/prints/classes.png" />
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You can manage the members and create users for them:
 
-### `npm test`
+<div align="center">
+    <img src="frontend/src/assets/images/prints/users.png" />
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Create projects:
 
-### `npm run build`
+<div align="center">
+    <img src="frontend/src/assets/images/prints/projects.png" />
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For the projects, you can have actions and manage that:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<div align="center">
+    <img src="frontend/src/assets/images/prints/actions.png" />
+</div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For the meetings, get the attendance list:
 
-### `npm run eject`
+<div align="center">
+    <img src="frontend/src/assets/images/prints/attendaceList.png" />
+</div>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+And, you can see all the informations in charts for each project:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<div align="center">
+    <img src="frontend/src/assets/images/prints/charts.png" />
+</div>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Frontend technologies and libs
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [React.JS](https://pt-br.legacy.reactjs.org/)
+- [Express](https://expressjs.com/pt-br/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [Styled-Components](https://styled-components.com/)
+- [React-router-dom](https://reactrouter.com/en/main)
+- [React-toastify](https://www.npmjs.com/package/react-toastify)
+- [React-icons](https://react-icons.github.io/react-icons/)
+- [React Responsive](https://www.npmjs.com/package/react-responsive)
+- [Apex Charts](https://apexcharts.com/docs/installation/)
+- [Dotenv](https://www.dotenv.org/docs/)
+- [React Select](https://react-select.com/home)
+- [Jwt-Decode](https://jwt.io/)
 
-## Learn More
+## Backend technologies and libs
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Node.js](https://nodejs.org/en)
+- [MySQL](https://www.mysql.com/)
+- [Express](https://expressjs.com/pt-br/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [Cors](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [Dotenv](https://www.dotenv.org/docs/)
+- [Multer](https://www.npmjs.com/package/multer)
+- [JsonWebToken](https://www.npmjs.com/package/jsonwebtoken)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact me if you want
 
-### Code Splitting
+- Email: [Marcos Jacometti](marcosjacometti10@gmail.com)
+- LinkedIn: [Marcos Jacometti](https://www.linkedin.com/in/marcos-vin%C3%ADcius-jacometti-675202202/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+I appreciate your time, I hope you enjoy the KaizenFlow! ✅
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+See you in the next repository...
