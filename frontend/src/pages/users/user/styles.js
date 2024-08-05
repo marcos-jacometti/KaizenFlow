@@ -17,5 +17,5 @@ export const Picture = styled.div`
     height: 15vh;
     width: 7.5vw;
     border-radius: 50%;
-    ${PictureMediaStyles}.
+    ${PictureMediaStyles}
 `;
