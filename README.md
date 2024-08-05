@@ -1,10 +1,10 @@
 <div align="center">
     <img src="frontend/src/assets/images/logo480x180.png" />
-
-    ![GitHub top language](https://img.shields.io/github/languages/top/marcos-jacometti/KaizenFlow)
-    ![GitHub repo size](https://img.shields.io/github/repo-size/marcos-jacometti/KaizenFlow)
-    ![GitHub last commit](https://img.shields.io/github/last-commit/marcos-jacometti/KaizenFlow)
 </div>
+
+![GitHub top language](https://img.shields.io/github/languages/top/marcos-jacometti/KaizenFlow)
+![GitHub repo size](https://img.shields.io/github/repo-size/marcos-jacometti/KaizenFlow)
+![GitHub last commit](https://img.shields.io/github/last-commit/marcos-jacometti/KaizenFlow)
 
 ## Welcome to the KaizenFlow Engineering ⚙️
 
