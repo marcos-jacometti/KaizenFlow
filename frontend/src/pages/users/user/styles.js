@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PictureMediaStyles } from "./responsive";
 
 export const Inputs = styled.div`
     display: flex;
@@ -16,4 +17,5 @@ export const Picture = styled.div`
     height: 15vh;
     width: 7.5vw;
     border-radius: 50%;
+    ${PictureMediaStyles}.
 `;
