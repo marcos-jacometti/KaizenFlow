@@ -8,7 +8,7 @@ export default function ActionChart({ projectId }) {
   useEffect(() => {
     const fetchActionsData = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/apiActions/actionsAPI/${projectId}`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}apiActions/actionsAPI/${projectId}`);
         const actions = response.data;
 
         let completed = 0;

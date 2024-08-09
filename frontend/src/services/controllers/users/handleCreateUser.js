@@ -8,7 +8,7 @@ export const handleCreateUser = async (username, email, password, profilePicture
         formData.append('password', password);
         formData.append('profilePicture', profilePictureFile);
 
-    const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/createUser`, formData, {
+    const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}users/createUser`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

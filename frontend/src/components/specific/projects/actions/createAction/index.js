@@ -25,7 +25,7 @@ export default function CreateAction({ visible, setVisible, projectId }) {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/users`);
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}api/users`);
                 const users = response.data;
                 setAllUsers(users);
                 setUserOptions(users.map(user => ({
@@ -47,7 +47,7 @@ export default function CreateAction({ visible, setVisible, projectId }) {
         }
 
         try {
-            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/apiCreate/actions`, {
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}apiCreate/actions`, {
                 project_id: projectId,
                 title,
                 description,

@@ -3,7 +3,7 @@ import { Close, Container, Inputs, Up, StyledToast } from "./styles";
 import { IoClose } from "react-icons/io5";
 import Input from "../../../common/input";
 import { FaCamera, FaLock, FaUser } from "react-icons/fa";
-import { MdConfirmationNumber, MdEmail } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
 import Button from "../../../common/button";
 import { handleCreateUser } from "../../../../services/controllers/users/handleCreateUser";
 import { toast } from "react-toastify";

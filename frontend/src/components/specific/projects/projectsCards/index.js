@@ -11,7 +11,7 @@ export default function ProjectCard({ searchTerm }) {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/project/projects`);
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}project/projects`);
                 setProjects(response.data);
             } catch (error) {
                 console.error('Error fetching projects:', error);

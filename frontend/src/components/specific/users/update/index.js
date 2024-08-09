@@ -34,7 +34,7 @@ export default function UpdateUser({ visible, setVisible, user }) {
         }
 
         try {
-            await axios.put(`${process.env.REACT_APP_BACKEND_URL}/update/user/${user.id}`, formData, {
+            await axios.put(`${process.env.REACT_APP_BACKEND_URL}update/user/${user.id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
