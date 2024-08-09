@@ -12,7 +12,7 @@ export default function UserCard({searchTerm}) {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}api/users`);
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/users`);
                 setUsers(response.data);
             } catch (error) {
                 console.error('Error fetching users:', error);

@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const handleCreateProject = async (projectNumber, projectName, description, selectedUsers) => {
     try {
-        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}projects/createProject`, {
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/projects/createProject`, {
             projectNumber,
             projectName,
             description,

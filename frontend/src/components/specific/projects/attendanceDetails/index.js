@@ -22,7 +22,7 @@ export default function AttendanceDetails({ projectId, setTotalAttendancePercent
 
         const fetchAttendanceDetails = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}attendance/project/${projectId}/attendance-details`);
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/attendance/project/${projectId}/attendance-details`);
                 setTotalMeetings(response.data.totalMeetings);
                 setAttendance(response.data.attendance);
 

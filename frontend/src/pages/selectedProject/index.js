@@ -19,7 +19,7 @@ export default function SelectedProject() {
     useEffect(() => {
         const fetchProject = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}selected/projects/${projectId}`);
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/selected/projects/${projectId}`);
                 setProject(response.data);
             } catch (error) {
                 console.error("Error fetching project details:", error);

@@ -8,7 +8,7 @@ export default function AttendancePercentage() {
   useEffect(() => {
     const fetchAttendanceData = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}attendanceDetails/list`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/attendanceDetails/list`);
         const attendanceList = response.data;
 
         let presentCount = 0;

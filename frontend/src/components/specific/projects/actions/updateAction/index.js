@@ -29,7 +29,7 @@ export default function UpdateAction({ visible, setVisible, actionId, fetchActio
         }
 
         try {
-        await axios.put(`${process.env.REACT_APP_BACKEND_URL}apiActionsUpdate/actions/${actionId.id}`, {
+        await axios.put(`${process.env.REACT_APP_BACKEND_URL}/apiActionsUpdate/actions/${actionId.id}`, {
                 title,
                 description,
                 responsible: responsible.value,
@@ -55,7 +55,7 @@ export default function UpdateAction({ visible, setVisible, actionId, fetchActio
 
         const fetchUsers = async () => {
             try {
-            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}api/users`);
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/users`);
                 const users = response.data.map(user => ({
                     value: user.id,
                     label: user.username
